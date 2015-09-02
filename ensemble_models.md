@@ -78,11 +78,10 @@ A key point to be stressed again is that model diversity is important. If the mo
 Let's now discuss some of the ways to create the base models, to ensure that they have enough diversity
 
 1. **Different training sets**: If there's enough data, the same model can be run on different training examples. In practice, transformation of original training set is carried out to create multiple training sets. (*Widely used*)
-2. **Different algorithms**: For many models, the algorithm inherently used can be specified differently to create different model outputs.  (*Not so widely used*)
+2. **Different algorithms/algorithm diversity**: Choose diverse algorithms. `LinearRegression`, `LogisticRegression` are diverse from `DecisionTree`, `RandomForest` etc (Regression Vs Tree-based). `SVM` is another class of algorithms. Also, `Regression` could be L1 or L2. The basis function for `SVM` could be radial or linear.  (*Widely used*)
 3. **Different parameter setups**: Called the hyperparameters, the parameters of the model can be varied to obtained different model outputs. An example would be to build `RandomForest` with shallow trees versus building it with denser trees (less trees vs more trees) (*Widely used*)
 4. **Algorithm randomization**: A lot of the models have randomness playing a key part and the model can be run with different random initialization. (*Not so widely used*)
-5. **Base model algorithm diversity** Care should be taken to select the base models. If only tree-based models are selected, the diversity is less pronounced than a model-set that has both a regression-based model output and a tree-based model output (Eg: LogisticRegression, RandomForest)(*Widely used*)
-6. **Feature Sampling** Using subset of columns for different model runs produce different model outputs and can help in estimating and containing variance of model predictions(*Widely used*)
+5. **Feature Sampling** Using subset of columns for different model runs produce different model outputs and can help in estimating and containing variance of model predictions(*Widely used*)
 
 
 #### Model Aggregation
