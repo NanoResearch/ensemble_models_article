@@ -14,7 +14,7 @@ Before going into what ensemble models are, it has to be mentioned that they are
 
 
 * Ensemble models improved the baseline movie recommendation by 10% and won the  Netflix million-dollar prize
-* Almost all recent [Kaggle](https://www.kaggle.com/) competitions are won by employing ensemble models. For example, see [here](https://github.com/ChenglongChen/Kaggle_CrowdFlower), 
+* Almost all recent [Kaggle](https://www.kaggle.com/) competitions are won by employing ensemble models. For example, see [here](https://github.com/ChenglongChen/Kaggle_CrowdFlower) 
 
 
 ### What are Ensemble Models?
@@ -107,7 +107,7 @@ Some of the ways to aggregate the models are
 2. `hyperopt`: It uses a form of bayesian optimization called *tree of Parzen estimators*. For weighted averaging of the base models, this is an efficient package for optimally identifying the models and their weights. In many cases, it may not be possible to specify the required objective function for the base models, but `hyperopt` allows custom objective function to be specified and so, ensures that the final ensembled model is optimized on the required objective function. 
 
 3. `RandomizedSearchCV`: While we didn't talk about hyper-parameter optimization, this helps in efficient searching of hyper-parameters for the model. When running dozens of models as base models, it may not be possible to do an exhaustive grid search of hyper parameters (and in some cases, not tractable too). Randomized search of the hyper-parameter space helps in producing better model parameters, and hence better base model outputs.
-4. `joblib`: Ease of doing parallel computing. Different models can be run in parallel. 
+4. `joblib`: For parallel computing. Different models can be run in parallel. 
 
 
 ### References
